@@ -2,16 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-int checkLineNumbers (char* currentLine, char* previousLine){
-    char* current = NULL;
-    char* previous = NULL;
-    if(previousLine){
-        strcpy(current, currentLine);
-        strcpy(previous, previousLine);
-        
-    }
-}
-
 int main() {
     int sum = 0;
     FILE* inputfile;

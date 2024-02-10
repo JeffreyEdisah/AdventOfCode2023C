@@ -5,12 +5,19 @@
 int main() {
     int sum = 0;
     FILE* inputfile;
-    char* previousLine = NULL;
-    char currentLine[256];
+    char* currentLine;
+    char* copiedCurrentLine;
+    char* previousLine;
+    char* copiedPreviousLine;
     inputfile = fopen("input_day_3_example.txt", "r");
+    fgets(currentLine, sizeof(currentLine), inputfile);
+    previousLine = currentLine;
     while (fgets(currentLine, sizeof(currentLine), inputfile))
     {
-        sum += checkLineNumbers(currentLine, previousLine);
+        copiedPreviousLine = previousLine;
+        copiedCurrentLine = currentLine;
+        
+
     }
     printf("%d\n", sum);
     getchar();
